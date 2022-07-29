@@ -5,7 +5,6 @@
     /* font-weight: 400; Peso de la fuente */
 
 
-
 :root { /* html  {} igual que el HTML*/
     font-size: 18px;
     --white30: white;
@@ -40,45 +39,47 @@ a {
     color: var(--gray30);
 }
 
-.header {
+.header-content { 
+    /* position: relative; +++*/
+    /* inset-block-start: -45px; ++ */
+    padding-inline: 20px;
+}
+
+/* .header { +++ */
 
     /*ALINEAR EL MENÚ IZQUIERDA*/
-    position: sticky;
-    inset-block-start: -45px;
-
+    /* position: sticky; ++*/
+    /* inset-block-start: -45px; ++ */
     /*COLOCAR UN MODAL*/
     /* background: red; */
     /* position: fixed; */
     /* height: 500px; */
     /* width: 500px; */
+    /* inset: 50px */
     /* inset-inline:50px; */
     /* inset-block:50px; */
+    /* blocñ-size: 500px */
     /* inline-size: 500px; */
+/* } */
 
-
-}
-
-.header-content {
-    position: relative;
-    inset-block-start: 65px;
-}
 
 header {
+    margin-block-start: 20px;
     /*--gray10: red; colocar otro color*/  
-    font-size: 14px;
-    color: var(--white);
-    position: absolute;
+    font-size: 14px; 
+    color: var(--white); 
+    /* position: absolute; ++ */
     /*top*/
-    inset-block-start: 0;
+    /* inset-block-start: 0; ++  */
     /*botton*/
     /* inset-block-end: ; */
     /*left*/
-    inset-inline-start: -208px;
+    /* inset-inline-start: -208px; ++ */
     /*right*/
     /* inset-inline-end: ; */
-    inline-size: 188px;
-
+    /* inline-size: 188px;  ++ */
 }
+
 
 header li {
     color: var(--white20);
@@ -111,13 +112,13 @@ header a:hover { /*Pseu*/
 
 h1 {
    /*font-size: 4em;*/
-   font-size: 60px;
    /* font-weight: normal; */
    /* text-align: right; Alineacion hacia la derecha de texto */
    /*font-size: 3.75em;*/
 
    /*COLOCAR LA IMAGEN DE LOS TEXTOS*/
-   margin-block-start: 64px;
+   font-size: 40px;
+   margin-block-start: 20px;
    margin-block-end: 16px;
     /* text-align: right; cambiar la posición del texto*/
 }
@@ -195,7 +196,8 @@ p {
     /* background-repeat: no-repeat; */
     /* background-position: left 50px bottom -50px;  */
     /* background-size: cover; Cover no se pierda */
-    height: 350px; /*Colocar el ancho del paner de arriba*/
+    /* height: 350px; Colocar el ancho del paner de arriba */
+    block-size: 50px /*COLOCAR EL ANCHO DE LA IMAGEN*/
 }
 
 /* Pseudo de Elementos */
@@ -279,6 +281,100 @@ blockquote p {
     padding-inline: 16px;
 }
 
+/*DISEÑO PARA COLOCAR LOS VÍDEOS*/
+
+/* .slider { */
+ /* border: 1px solid red; */
+/* } */
+
+.slider-container {
+    /* block-size: 100px; COLOCAR ALTO LA IMAGEN */
+    display: block;
+    overflow: auto; /*COLOCAR ADENTRO EL CONTENIDO*/
+    scroll-behavior: smooth;
+    white-space: nowrap; /*VAYA A LA SIGUIENTE LÍNEA*/
+    /* border: 1px solid blue; */
+    font-size: 0;
+}
+
+.video {
+    margin: 0;
+    /* border: 1px solid palegreen; */
+    display: inline-block; /*COLOCAR EL ANCHO*/
+    width: 100%; /*ANCHO*/
+    height: auto;
+    aspect-ratio: 16/9; /*Video vertical 9/16*/
+}
+
+.slider-bullet-list {
+    /* border: 1px solid yellow; */
+    text-align: center;
+    margin-block-start: 10px;
+    
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: white;
+    border-radius: 50%;
+}
+
+.form input {
+    /* inline-size: 100%; Mismo alto */
+    width: 100%;
+    border: 5px solid var(--white20);
+    background: #251F24;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--white30);
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px; /*COLOCAR EL ESPACIO DEL INPUT*/
+}
+
+.form input[type="submit"]{
+    background: #157efb;
+    border: none;
+}
+.form input::-webkit-input-placeholder { 
+    color: var(--white20)
+}
+
+/*Medias_QUERIES*/
+
+@media screen and (min-width: 1366px) { /*min-width, ES PARA COLOCAR MINIMO*/ 
+    .hero {
+        block-size: 350px;
+    }
+    .header {
+    
+        position: sticky;
+        inset-block-start: 65px;
+        padding-inline: 0;
+    }
+
+    .header-content {
+        position: relative;
+        inset-block-start: 65px;
+    }
+    
+    header { 
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+        inline-size: 188px;
+    }
+
+    h1 {
+        font-size: 60px;
+        margin-block-start: 64px;
+    
+  }  
+}
 /* Modelo de Caja */
 
 

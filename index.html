@@ -22,9 +22,10 @@
    <div class="header">
        <div class="wrapper">
            <div class="header-content">
+              </section>
                <header>
                        <nav>
-                           <details>
+                           <details open>
                                <summary>
                                Setup   
                             </summary>
@@ -35,7 +36,7 @@
                            <li><a href="#git">GitHub</a></li>
                        </ol>
                    </details>
-                   <details>
+                   <details open>
                        <summary>
                            Conceptos esenciales del Desarrollo Web
                        </summary>
@@ -123,7 +124,6 @@
 &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -209,12 +209,50 @@
         </li>
     </ul>
 </section>
+    <div class="section-content">
+        <div class="slider">
+            <scroll-container class="slider-container">
+                <scroll-page class="slider-slide" id="video-1">
+                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/5f5Ig_U2Bpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                </scroll-page>
+            <scroll-page class="slider-slider" id="video-2">
+                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/5f5Ig_U2Bpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </scroll-page>
+            <scroll-page class="slider-slider" id="video-3">
+                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/5f5Ig_U2Bpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </scroll-page>
+            </scroll-container>
+            <div class="slider-bullet-list">
+                <a href="#video-1" class="slider-bullet"></a>
+                <a href="#video-2" class="slider-bullet"></a>
+                <a href="#video-3" class="slider-bullet"></a>
+            </div>
+        </div>
+    </div>
     <h3>Modelo de caja</h3>
-    <img src="./img/img_1.png" alt="Presentación programador" title="Presentación programador">
     <p>
         Si tienes alguna pregunta escríbeme a
         <a href="mailto:me@leonidasesteban.com">me@leonidasesteban.com</a>
     </p>
+    <div class="section-content">
+        
+        <h2>Ingresa a nuestor newsletter</h2>
+        <form action="#" class="form">
+<!--            
+            <select name="" id="">
+                <option value="">Curso 1</option>
+                <option value="">Curso 2</option>
+            </select>
+
+            <input type="checkbox">
+            <input type="radio"> -->
+
+            <input type="date" required placeholder="Nombre">
+            <input type="email" required placeholder="Correo Electrónico">
+        <input type="submit" value="Suscribirme">
+        </form>
+    </div>
 </div>
 </div>
 </main>
